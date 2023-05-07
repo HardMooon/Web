@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ Student.SecondName }}
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>Все студенты</h1>
+    <div class="alert alert-info">
+        <h2>{{ Student.SecondName }} {{ Student.FirstName }} {{ Student.SurName }} </h2>
+        <p><b>Группа: {{ Student.Group }}</b></p>
+        <p><b>Дата регистрации: {{ Student.date.date() }}</b></p>
+        <a href="/students/{{ Student.id }}/del" class="btn btn-danger">Удалить</a>
+        <a href="/students/{{ Student.id }}/update" class="btn btn-warning">Редатировать</a>
+    </div>
+</div>
+{% endblock %}

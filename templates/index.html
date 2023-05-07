@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Главная страница
+{% endblock %}
+
+{% block body %}
+<div class="container">
+<div class="row row-cols-1 row-cols-md-1 mb-3 text-center">
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Студенту</h4>
+          </div>
+          <div class="card-body">
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Более 50 направлений подготовки</li>
+              <li>От 22 бюджетных мест</li>
+              <li>Проходной по ЕГЭ от 120 баллов</li>
+              <li>Лучшие преподаватели всего Кирова</li>
+            </ul>
+            <a href="/create-student"><button type="button" class="w-100 btn btn-lg btn-outline-primary">Стать студентом</button></a>
+          </div>
+        </div>
+      </div>
+</div>
+</div>
+{% endblock %}

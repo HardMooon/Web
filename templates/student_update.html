@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Обновление данных
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1>Обновление данных</h1>
+    <form method="post">
+        <input type="text" name="SecondName" id="SecondName" class="form-control" value="{{ Student.SecondName }}" placeholder="Фамилия"><br>
+        <textarea name="FirstName" id="FirstName" class="from-control" placeholder="Имя">{{ Student.FirstName }}</textarea><br>
+        <textarea name="SurName" id="SurName" class="from-control" placeholder="Отчество">{{ Student.SurName }}</textarea><br>
+        <textarea name="Group" id="Group" class="from-control" placeholder="Группа">{{ Student.Group }}</textarea><br>
+        <input type="submit" class="btn btn-success" value="Обновить">
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Все студенты
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>Все студенты</h1>
+
+    {% if Students|length > 0 %}
+        {% for el in Students %}
+        <div class="alert alert-info">
+            <h2>{{ el.SecondName }} {{ el.FirstName }} {{ el.SurName }} </h2>
+            <a href="/students/{{ el.id }}" class="btn btn-warning">Подробнее</a>
+        </div>
+        {% endfor %}
+    {% else %}
+    <p>У нас ещё нет студентов :(</p>
+    {% endif %}
+</div>
+{% endblock %}

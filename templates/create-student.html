@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Данные студента
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1>Введите данные</h1>
+    <form method="post">
+        <input type="text" name="SecondName" id="SecondName" class="form-control" placeholder="Фамилия"><br>
+        <textarea name="FirstName" id="FirstName" class="from-control" placeholder="Имя"></textarea><br>
+        <textarea name="SurName" id="SurName" class="from-control" placeholder="Отчество"></textarea><br>
+        <textarea name="Group" id="Group" class="from-control" placeholder="Группа"></textarea><br>
+        <input type="submit" class="btn btn-success" value="Отправить">
+    </form>
+</div>
+{% endblock %}
